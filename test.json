@@ -7,7 +7,7 @@
   "policy_name": null,
   "policy_group": null,
   "run_list": [
-  "recipe[test_cookbook]"
+  "recipe[postfix]"
 ]
 
 }
