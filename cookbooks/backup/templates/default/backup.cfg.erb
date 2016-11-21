@@ -1,0 +1,17 @@
+#!/bin/bash
+# Junaid Shah - junaidsh@thoughtworks.com
+# Backup for testing automated cloudfront on ec2.
+
+# Storage folder where to move backup files
+storage=<%= node['backup']['config']['storage_location'] %>
+
+# Source folder from where files are backed up.
+source=<%= node['backup']['config']['source_location'] %>
+
+# Move the files
+rsync -a --checksum $source/* $storage
+if [ "$?" = 0 ]; then
+  mail -s "Backup of <%= node['backup']['config']['upload_server_name'] %> completed sucessfully on $date_daily" <%= node['backup']['config']['notification_email'] %> <<< "The completed backup is available on <%= node['backup']['config']['nfs_server_name'] %> "
+ else
+ mail -s "Backup of <%= node['backup']['config']['upload_server_name'] %> failed!!!!" <%= node['backup']['config']['notification_email'] %> <<< "The backup has not completed. Please take a look."
+fi

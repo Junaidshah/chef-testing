@@ -1,0 +1,5 @@
+default['backup']['config']['storage_location'] = '/mnt/backup'
+default['backup']['config']['source_location'] = '/var/www/html/upload'
+default['backup']['config']['nfs_server_name'] = 'fmtgocdtestchefclient01.go.cd'
+default['backup']['config']['upload_server_name'] = 'myuploadsserver.com'
+default['backup']['config']['notification_email'] = 'junaidsh@myuploadsserver.com'
