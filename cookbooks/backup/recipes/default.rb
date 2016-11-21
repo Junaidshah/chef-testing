@@ -35,8 +35,9 @@ end
 package "mailx" do
   action :install
 end
+
 #mount '/mnt/backup' do
-#  device 'fmtgocdtestchefclient01.go.cd:/mirror/backup_uploads'
+#  device 'sunfsserver.com:/mirror/backup_uploads'
 #  fstype 'nfs'
 #  options 'rw'
 #  action [:mount, :enable]

@@ -1,19 +1,13 @@
 {
   "name": "singaporeuniversityuploads.com",
-  "chef_environment": "_default",
   "normal": {
-   "postfix": {
-    "mail_type": "client",
-     "main": {
-      "mydomain": "singaporeuniversityuploads.com",
-      "myorigin": "singaporeuniversityuploads.com",
-      "relayhost": "[smtp.gmail.com]:587",
-      "smtp_use_tls": "no"
-      }
-    }
+   "tags": [
+
+    ]
   },
   "run_list": [
-  "recipe[postfix]"
+  "recipe[postfix]",
+  "recipe[backup]"
 ]
 
 }
