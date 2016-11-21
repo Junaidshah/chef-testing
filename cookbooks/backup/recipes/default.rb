@@ -36,9 +36,9 @@ package "mailx" do
   action :install
 end
 
-#mount '/mnt/backup' do
-#  device 'sunfsserver.com:/mirror/backup_uploads'
-#  fstype 'nfs'
-#  options 'rw'
-#  action [:mount, :enable]
-#end
+mount '/mnt/backup' do
+  device 'sunfsserver.com:/mirror/backup_uploads'
+  fstype 'nfs'
+  options 'rw'
+  action [:mount, :enable]
+end
